@@ -11,7 +11,7 @@ This project aims to develop a machine learning model that predicts whether a ho
 
 Team Members:
 
-Bhuwan Rathi
+Bhuwan Rathi  
 Prajwal Kulkarni  
 Shreyas Chitransh  
 
