@@ -18,7 +18,6 @@ Prajwal Kulkarni
  
 Shreyas Chitransh  
 
-
 **INTRODUCTION**
 
 **Overview : A brief description of the project**
