@@ -39,7 +39,6 @@ Customer Satisfaction: Accurate occupancy rate predictions allow hotels to ensur
 
 **LITERATURE SURVEY**
 
-
 **Existing Problems:**
 
 The existing problem in the hospitality industry lies in accurately predicting occupancy rates and demand. Traditional methods often rely on historical patterns and manual analysis, which may not capture the dynamic nature of demand fluctuations accurately.
