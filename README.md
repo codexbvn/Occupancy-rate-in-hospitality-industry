@@ -46,4 +46,3 @@ The existing problem in the hospitality industry lies in accurately predicting o
 Limited Accuracy: Traditional methods of forecasting occupancy rates in the hospitality industry may lack accuracy due to their reliance on historical data and expert judgment alone. They may not effectively capture the complex interplay of factors that influence occupancy rates, such as seasonality, local events, and economic indicators.
 Data Availability and Quality: Obtaining accurate and comprehensive data for occupancy rate prediction can be challenging. Data collection processes may be fragmented, and data quality issues such as missing values or inconsistencies can affect the reliability of predictions.
 Dynamic Nature of the Industry: The hospitality industry is highly dynamic, with constantly changing trends, customer preferences, and market conditions. Existing models may struggle to adapt quickly to these dynamic factors, leading to suboptimal predictions.
-
