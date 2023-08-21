@@ -36,7 +36,6 @@ def predict():
 
     return render_template("index.html",y="The predicted availability is "+ prediction)
     
-    
 
 if __name__=='__main__':
     app.run(debug=False)
