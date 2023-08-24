@@ -47,7 +47,5 @@ Limited Accuracy: Traditional methods of forecasting occupancy rates in the hosp
 
 
 
-
-
 Data Availability and Quality: Obtaining accurate and comprehensive data for occupancy rate prediction can be challenging. Data collection processes may be fragmented, and data quality issues such as missing values or inconsistencies can affect the reliability of predictions.
 Dynamic Nature of the Industry: The hospitality industry is highly dynamic, with constantly changing trends, customer preferences, and market conditions. Existing models may struggle to adapt quickly to these dynamic factors, leading to suboptimal predictions.
