@@ -6,17 +6,7 @@ This project aims to develop a machine learning model that predicts whether a ho
 **Video Link** 
 **https://drive.google.com/file/d/1sUyPag6dcK9IRjPK2sc0VsCFL5YQ7Nru/view?usp=sharing**
 
-**Machine Learning Model for Occupancy Rates and Demand in the Hospitality Industry**
-
-**Team No - 212**
-
-Team Members:
-
-Bhuwan Rathi  
-
-Prajwal Kulkarni 
- 
-Shreyas Chitransh  
+**Machine Learning Model for Occupancy Rates and Demand in the Hospitality Industry** 
 
 **INTRODUCTION**
 
@@ -49,3 +39,12 @@ Limited Accuracy: Traditional methods of forecasting occupancy rates in the hosp
 
 Data Availability and Quality: Obtaining accurate and comprehensive data for occupancy rate prediction can be challenging. Data collection processes may be fragmented, and data quality issues such as missing values or inconsistencies can affect the reliability of predictions.
 Dynamic Nature of the Industry: The hospitality industry is highly dynamic, with constantly changing trends, customer preferences, and market conditions. Existing models may struggle to adapt quickly to these dynamic factors, leading to suboptimal predictions.
+**Team No - 212**
+
+Team Members:
+
+Bhuwan Rathi  
+
+Prajwal Kulkarni 
+ 
+Shreyas Chitransh 
