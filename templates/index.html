@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grandeur Hotel — Luxury Redefined</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <a href="#" class="logo">Grand<span>eur</span></a>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reservation" class="btn">Check Availability</a>
+  </nav>
+  <div id="menu-btn" class="fas fa-bars"></div>
+</header>
+
+<!-- Hero -->
+<section class="home" id="home">
+  <div class="swiper home-slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide slide"
+           style="background: url('{{ url_for('static', filename='images/home-slide1.jpg') }}') no-repeat center/cover;">
+        <div class="content">
+          <span class="eyebrow">Welcome to Grandeur</span>
+          <h3>Where every stay<br>becomes a <em>memory</em></h3>
+          <a href="#reservation" class="btn">Reserve Your Room</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide"
+           style="background: url('{{ url_for('static', filename='images/home-slide2.jpg') }}') no-repeat center/cover;">
+        <div class="content">
+          <span class="eyebrow">Unmatched Elegance</span>
+          <h3>Curated luxury for<br>the <em>discerning</em> traveller</h3>
+          <a href="#about" class="btn">Discover More</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide"
+           style="background: url('{{ url_for('static', filename='images/home-slide3.jpg') }}') no-repeat center/cover;">
+        <div class="content">
+          <span class="eyebrow">World-Class Amenities</span>
+          <h3>An experience<br>beyond <em>expectations</em></h3>
+          <a href="#gallery" class="btn">View Gallery</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide"
+           style="background: url('{{ url_for('static', filename='images/home-slide4.jpg') }}') no-repeat center/cover;">
+        <div class="content">
+          <span class="eyebrow">Smart Availability</span>
+          <h3>Know before<br>you <em>arrive</em></h3>
+          <a href="#reservation" class="btn">Check Occupancy</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="row">
+    <div class="image">
+      <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="Grandeur Hotel Lobby">
+    </div>
+    <div class="content">
+      <p class="subheading">Our Story</p>
+      <h3>A legacy of <em>refined</em><br>hospitality since 1984</h3>
+      <p>Nestled in the heart of the city, Grandeur Hotel has been synonymous with impeccable service, timeless design, and an atmosphere that transforms every guest into an honoured friend.</p>
+      <p>With over four decades of welcoming discerning travellers from around the world, we have perfected the art of making every guest feel at home — only better.</p>
+      <div class="stats">
+        <div>
+          <span class="num">40+</span>
+          <p>Years of Excellence</p>
+        </div>
+        <div>
+          <span class="num">180</span>
+          <p>Luxury Rooms</p>
+        </div>
+        <div>
+          <span class="num">98%</span>
+          <p>Guest Satisfaction</p>
+        </div>
+      </div>
+      <a href="#reservation" class="btn btn-solid">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <p class="subheading">Explore</p>
+  <h1 class="heading">Our <span>Gallery</span></h1>
+  <div class="gold-divider"><i class="fas fa-diamond"></i></div>
+  <div class="swiper gallery-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide">
+        <img src="{{ url_for('static', filename='images/gallery1.jpg') }}" alt="">
+        <div class="overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{{ url_for('static', filename='images/gallery2.jpg') }}" alt="">
+        <div class="overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{{ url_for('static', filename='images/gallery3.jpg') }}" alt="">
+        <div class="overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{{ url_for('static', filename='images/gallery4.jpg') }}" alt="">
+        <div class="overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{{ url_for('static', filename='images/gallery5.jpg') }}" alt="">
+        <div class="overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{{ url_for('static', filename='images/gallery6.jpg') }}" alt="">
+        <div class="overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Occupancy Prediction -->
+<section class="reservation" id="reservation">
+  <p class="subheading">AI-Powered</p>
+  <h1 class="heading">Check <span>Availability</span></h1>
+  <div class="gold-divider"><i class="fas fa-diamond"></i></div>
+
+  <div class="form-card">
+    <form method="POST" action="/">
+      <div class="grid">
+
+        <div class="field">
+          <label>Date &amp; Time <span class="req">*</span></label>
+          <input type="datetime-local" name="date" required>
+        </div>
+
+        <div class="field">
+          <label>Temperature (°C) <span class="req">*</span></label>
+          <input type="number" name="temperature" step="0.001" required placeholder="e.g. 22.5">
+        </div>
+
+        <div class="field">
+          <label>Humidity (%) <span class="req">*</span></label>
+          <input type="number" name="humidity" step="0.0001" required placeholder="e.g. 27.0">
+        </div>
+
+        <div class="field">
+          <label>Light (lux) <span class="req">*</span></label>
+          <input type="number" name="light" step="0.1" required placeholder="e.g. 430">
+        </div>
+
+        <div class="field">
+          <label>CO₂ (ppm) <span class="req">*</span></label>
+          <input type="number" name="co2" step="0.01" required placeholder="e.g. 700">
+        </div>
+
+        <div class="field">
+          <label>Humidity Ratio <span class="req">*</span></label>
+          <input type="number" name="humidity_ratio" step="0.000001" required placeholder="e.g. 0.004793">
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-solid">Predict Occupancy</button>
+        {% if result %}
+          <p class="result {{ status }}">
+            {% if status == 'available' %}
+              <i class="fas fa-circle-check"></i>
+            {% elif status == 'occupied' %}
+              <i class="fas fa-circle-xmark"></i>
+            {% else %}
+              <i class="fas fa-triangle-exclamation"></i>
+            {% endif %}
+            {{ result }}
+          </p>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" style="padding:7rem 8%;">
+  <div class="grid">
+    <div class="box">
+      <h3>Grandeur Hotel</h3>
+      <p>A sanctuary of refined luxury where every detail is crafted with precision and every guest is welcomed with warmth.</p>
+    </div>
+    <div class="box">
+      <h3>Contact</h3>
+      <a href="#"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+      <a href="#"><i class="fas fa-envelope"></i> stay@grandeurhotel.com</a>
+      <a href="#"><i class="fas fa-location-dot"></i> 12 Grand Avenue, New York</a>
+    </div>
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+      <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
+      <a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a>
+      <a href="#reservation"><i class="fas fa-chevron-right"></i> Check Availability</a>
+    </div>
+  </div>
+  <div class="bottom">
+    <p class="credit">&copy; 2024 <span>Grandeur Hotel</span>. All rights reserved.</p>
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
