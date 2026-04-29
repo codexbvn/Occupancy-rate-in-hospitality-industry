@@ -89,16 +89,16 @@ The AI-powered prediction form:
 ┌─────────────────────────────────────────────────────────┐
 │              CHECK AVAILABILITY                         │
 │  ─────────────────────────────────────────────────────  │
-│  Date & Time *       │  Temperature (°C) *             │
-│  2024-02-07 14:00    │  23.1                           │
+│  Date & Time *       │  Temperature (°C) *              │
+│  2024-02-07 14:00    │  23.1                            │
 │                      │                                  │
-│  Humidity (%) *      │  Light (lux) *                  │
-│  27.3                │  430                            │
+│  Humidity (%) *      │  Light (lux) *                   │
+│  27.3                │  430                             │
 │                      │                                  │
-│  CO₂ (ppm) *        │  Humidity Ratio *               │
-│  721                 │  0.00479                        │
+│  CO₂ (ppm) *         │  Humidity Ratio *                │
+│  721                 │  0.00479                         │
 │                                                         │
-│  [ PREDICT OCCUPANCY ]  ✓ Room is currently Occupied   │
+│  [ PREDICT OCCUPANCY ]  ✓ Room is currently Occupied    │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -343,18 +343,6 @@ pickle.dump(le,     open('le.pkl',     'wb'))
 ## 🐛 Bug Fixes & Improvements
 
 This repository is a fixed and revamped version of the original. Here is a full changelog:
-
-### Critical Bug Fixes
-
-| # | File | Original Bug | Fix Applied |
-|---|---|---|---|
-| 1 | `app.py` | Model path hardcoded to `D:/Externship/Flask/model.pkl` (Windows absolute path — crashes on any other machine) | `os.path.join(os.path.dirname(__file__), 'model.pkl')` — portable across all OSes |
-| 2 | `app.py` | `MinMaxScaler.fit_transform()` called on a single-row prediction input — fitting on 1 sample maps every value to exactly 0, producing garbage predictions | Scaler now fitted on full training data and saved as `scaler.pkl`; inference uses `.transform()` only |
-| 3 | `app.py` | `LabelEncoder` used in training but a manual dict used at inference — encoding mismatch silently corrupts the `day` feature | `le.pkl` saved during training and loaded at inference to guarantee identical encoding |
-| 4 | `app.py` | `model.pkl` serialized with sklearn 1.0.2 — raises `ValueError` on modern sklearn (incompatible node array dtype) | Model retrained on same data with same algorithm; achieves 93.06% test accuracy |
-| 5 | `index.html` | Font Awesome CDN URL broken: `https://c  dnjs.cloudflare.com/...` (space in URL) | Corrected to `https://cdnjs.cloudflare.com/...` |
-| 6 | `index.html` | Hero slide backgrounds used absolute path `/static/images/...` — breaks when Flask app is not mounted at root | Changed to `{{ url_for('static', filename='images/...') }}` |
-| 7 | `app.py` | No error handling — any malformed input raises an unhandled exception and returns HTTP 500 | Wrapped in `try/except` — errors render a user-friendly message in the result area |
 
 ### Design Revamp
 
