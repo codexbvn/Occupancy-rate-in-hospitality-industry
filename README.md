@@ -28,7 +28,7 @@
 [Features](#-features) · [Demo](#-demo) · [Installation](#-installation) · [Usage](#-usage) · [ML Model](#-machine-learning-model) · [API](#-api-reference) · [Contributing](#-contributing)
 
 ---
-
+ 
 </div>
 
 ## 📖 Table of Contents
